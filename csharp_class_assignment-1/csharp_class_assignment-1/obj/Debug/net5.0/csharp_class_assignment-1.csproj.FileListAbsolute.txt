@@ -1,0 +1,5 @@
+D:\Lab Work\csharp_class_assignment-1\csharp_class_assignment-1\csharp_class_assignment-1\obj\Debug\net5.0\csharp_class_assignment-1.csproj.AssemblyReference.cache
+D:\Lab Work\csharp_class_assignment-1\csharp_class_assignment-1\csharp_class_assignment-1\obj\Debug\net5.0\csharp_class_assignment-1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Lab Work\csharp_class_assignment-1\csharp_class_assignment-1\csharp_class_assignment-1\obj\Debug\net5.0\csharp_class_assignment-1.AssemblyInfoInputs.cache
+D:\Lab Work\csharp_class_assignment-1\csharp_class_assignment-1\csharp_class_assignment-1\obj\Debug\net5.0\csharp_class_assignment-1.AssemblyInfo.cs
+D:\Lab Work\csharp_class_assignment-1\csharp_class_assignment-1\csharp_class_assignment-1\obj\Debug\net5.0\csharp_class_assignment-1.csproj.CoreCompileInputs.cache

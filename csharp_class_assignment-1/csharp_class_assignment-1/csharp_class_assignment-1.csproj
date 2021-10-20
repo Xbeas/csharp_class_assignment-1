@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>csharp_class_assignment_1</RootNamespace>
+	  <StartupObject>csharp_class_assignment_1.Q2_1</StartupObject>
+  </PropertyGroup>
+
+</Project>
