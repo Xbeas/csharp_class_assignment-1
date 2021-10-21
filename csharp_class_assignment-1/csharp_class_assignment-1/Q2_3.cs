@@ -15,43 +15,15 @@ namespace csharp_class_assignment_1
                1, "TEST NAME","CS", "TOC",3
             );
 
-            do
+            Console.WriteLine("Enter five subjects marks");
+            for(int i = 0; i < 5; i++)
             {
-                Console.WriteLine("\n=====================\n Choices: \n 1. Debit from account\n 2. Credit from account Show balance \n Enter a choice Numbers: ");
-                int a = int.Parse(Console.ReadLine());
+                A.marks[i] = int.Parse(Console.ReadLine());
+                
+            }
+             A.displayresult(A.marks);
+            A.displaydata();
 
-                switch (a)
-                {
-                    case 1:
-                        {
-                            Console.WriteLine("\n Enter debit amt: ");
-
-                            A.amt = Convert.ToDouble(Console.ReadLine());
-                            A.debit(A.amt);
-                            A.accept(A.acc_nu, A.cust_name, A.acc_type, "Debit", A.amt);
-
-                        }
-                        break;
-                    case 2:
-                        {
-                            Console.WriteLine("\n Enter credit amt: ");
-
-                            A.amt = Convert.ToDouble(Console.ReadLine());
-                            A.credit(A.amt);
-                            A.accept(A.acc_nu, A.cust_name, A.acc_type, "Credit", A.amt);
-                        }
-                        break;
-                    case 3:
-                        {
-                            A.show();
-                        }
-                        break;
-                    default:
-                        Environment.Exit(0);
-                        break;
-                }
-
-            } while (true);
         }
     }
 
@@ -63,31 +35,41 @@ namespace csharp_class_assignment_1
         public string branch;
         public string cclass;
         public int sem;
+        int total=0;
 
         public Students(int _rollno, string _name, string _branch, string _cclass, int _sem)
         {
             rollno = _rollno; name = _name; branch = _branch; cclass = _cclass; sem = _sem;
         }
 
-        public void credit(double money)
+        public void displayresult(int[] marks)
         {
-            balance += money;
-        }
-        public void debit(double money)
-        {
-            balance -= money;
-        }
+            bool f2 = true;
+            int avg;
+            for(int i = 0; i < 5; i++)
+            {
+                if (marks[i] < 35)
+                    f2 = false;
+                else
+                    total = total + marks[i];
+            }
+            avg = total / 5;
+            if(f2==false || avg<50)
+                Console.WriteLine("You are failed");
+            else
+                Console.WriteLine("You are passed");
 
-        public void show()
-        {
-            Console.WriteLine("\n Account Number:" + acc_nu);
-            Console.WriteLine("\n Customer Name:" + cust_name);
-            Console.WriteLine("\n Account type:" + acc_type);
-            Console.WriteLine("\n Transaction type:" + tranc_type);
-            Console.WriteLine("\n Amount:" + amt);
-            Console.WriteLine("\n Balance:" + balance);
         }
-
+        public void displaydata()
+        {
+            Console.WriteLine("Roll Number: " + rollno);
+            Console.WriteLine("Student Name: " + name);
+            Console.WriteLine("Class: " + cclass);
+            Console.WriteLine("Semester: " +sem);
+            Console.WriteLine("Branch: " + branch);
+            Console.WriteLine("Total Marks: " + total);
+            
+        }
 
     }
 }
